@@ -1,0 +1,21 @@
+-
+	var menu_items = [
+		{
+			link: 'index',
+			title: 'Main page'
+		},
+		{
+			link: 'gallery',
+			title: 'Gallery'
+		},
+		{
+			link: 'table',
+			title: 'Table'
+		},
+		]
+
+mixin menu(title)
+	div.center
+				each item in menu_items
+					- var isSelected = (item.title == title)
+					div(class = (isSelected ? 'selected menu' : 'menu' )): a(href = item.link+'.html')=item.title

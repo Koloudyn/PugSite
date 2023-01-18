@@ -1,0 +1,295 @@
+extends template
+block items
+    - var title = 'Table'
+block content
+        div.grid-container.grid-container-for-table
+            div.topic1.block
+                div.text
+                    p.
+                        The observable universe contains an estimated 10 <sup> 22 </sup>  to 10 <sup> 24 </sup>  stars. Only about 4,000 of these stars are visible
+                        to the naked eye, all within the Milky Way galaxy.
+                    p   Astronomers often group stars by their mass:
+                    ul
+                        li  Very low mass stars, with masses below 0.5 M☉.
+                        li  Low mass stars (including the Sun), with a mass between 0.5 M☉ and ~2.25 M☉.
+                        li  Intermediate-mass stars, between ~2.25 M☉ and ~8 M☉.
+                        li  Massive stars generally have a minimum mass of ~8 M☉.
+
+            div.topic2.block
+                div.parameters
+                    details
+                        summary Diagram
+                        form
+                            table
+                                tr
+                                    th  OX value
+                                    th  Result
+                                tr
+                                    td
+                                        input(type='radio' name='ox' value='0')
+                                        span Spectral class
+                                    td
+                                        input(type='checkbox' name='oy' value='0')
+                                        span Absolute stellar luminosity
+                            div.center-text
+                                input(type='button' value='Make')
+                    details
+                        summary Filter
+                        form
+                            div
+                                label(for='structure')  Name:
+                                input(type='text' name='structure')
+                            div
+                                label(for='city')    Absolute stellar luminosity:
+                                <br>
+                                span from
+                                input(type='text' name='yFrom')
+                                span to
+                                input(type='text' name='yFo')
+                            div
+                                label(for='yFrom')    Spectral class:
+                                input(type='text' name='structure')
+                            div.center-text
+                                input(type='button' value='Search')
+                    details
+                        summary Sorting
+                        form
+                            div
+                                span   First:
+                                select(name='sortFirst')
+                                    option(value='0')   None
+                                    option(value='1')   Name
+                                    option(value='4')   Absolute stellar luminosity
+                                    option(value='5')   Spectral class
+                                <br>
+                                span   descending?
+                                input(type='checkbox' name='descFirst')
+                            div
+                                span   Second:
+                                select(name='sortSecond')
+                                    option(value='0')   None
+                                    option(value='1')   Name
+                                    option(value='4')   Absolute stellar luminosity
+                                    option(value='5')   Spectral class
+                                <br>
+                                span descending?
+                                input(type='checkbox' name='descSecond')
+                            div
+                                span   Third:
+                                select(name='sortThird')
+                                    option(value='0')   None
+                                    option(value='1')   Name
+                                    option(value='4')   Absolute stellar luminosity
+                                    option(value='5')   Spectral class
+                                <br>
+                                span   descending?
+                                input(type='checkbox' name='descThird')
+                            div.center-text
+                                input(type='button' value='Sorting')
+
+            div.topic3.topic3-background-for-table.block
+                 table.stars
+                    tr
+                        th Common name
+                        th Abs Magnitude
+                        th Spectral Type
+                    tr
+                        td Proxima Centauri
+                        td   15.45
+                        td M5Ve
+                    tr
+                        td  <font face="Symbol"> a </font>  Centauri B
+                        td    5.70
+                        td K1V
+                    tr
+                        td       Rigel Kentaurus
+                        td    4.34
+                        td G2V
+                    tr
+                        td        Barnard's Star
+                        td   13.24
+                        td sdM4
+                    tr
+                        td           Sirius A
+                        td    1.45
+                        td A0m...
+                    tr
+                        td           Ross 154
+                        td   13.00
+                        td M3.5Ve
+                    tr
+                        td        <font face="Symbol"> e </font>  Eridani
+                        td    6.18
+                        td K2V
+                    tr
+                        td        Lacaille 9352
+                        td    9.76
+                        td M2/M3V
+                    tr
+                        td          61 Cygni A
+                        td    7.49
+                        td K5V
+                    tr
+                        td           Procyon
+                        td    2.68
+                        td F5IV-V
+                    tr
+                        td          61 Cygni B
+                        td    8.33
+                        td K7V
+                    tr
+                        td        GX Andromedae
+                        td   10.33
+                        td M1V
+                    tr
+                        td          <font face="Symbol"> e </font>  Indi
+                        td    6.89
+                        td K5V
+                    tr
+                        td            <font face="Symbol"> t </font>  Ceti
+                        td    5.68
+                        td G8V
+                    tr
+                        td           YZ Ceti
+                        td   14.25
+                        td M5.5Ve
+                    tr
+                        td        Luyten's Star
+                        td   11.94
+                        td M5
+                    tr
+                        td        Kapteyn's Star
+                        td   10.89
+                        td M0V
+                    tr
+                        td        AX Microscopii
+                        td    8.71
+                         td M1/M2V
+                    tr
+                        td          Wolf 1061
+                        td   11.95
+                        td M4
+                    tr
+                        td      van Maanen's Star
+                        td   14.15
+                        td DG
+                    tr
+                        td    IL Aquarii or Ross 780
+                        td   11.80
+                        td M5
+                    tr
+                        td       Furuhjelm I- 650
+                        td   10.40
+                        td M2Vvar
+                    tr
+                        td     o <sup> 2 </sup>  Eridani A
+                        td    5.92
+                        td K1V
+                    tr
+                        td         EV Lacertae
+                        td   11.77
+                        td M4.5Ve
+                    tr
+                        td        70 Ophiuchi A
+                        td    5.50
+                        td K0V SB
+                    tr
+                        td            Altair
+                        td    2.20
+                         td A7IV-V
+                    tr
+                        td       EE Leo or Wolf 358
+                        td   12.89
+                        td M4:
+                    tr
+                        td          Wolf 1453
+                        td    9.19
+                        td M1V
+                    tr
+                        td           Wolf 630
+                        td   10.23
+                        td M3Ve
+                    tr
+                        td  <font face="Symbol"> s </font>  Draconis
+                        td    5.87
+                        td K0V
+                    tr
+                        td    <font face="Symbol"> h </font>  Cassiopei or Wolf 24
+                        td    4.59
+                        td G0V SB
+                    tr
+                        td        36 Ophiuchi C
+                        td    7.45
+                        td K5V
+                    tr
+                        td          BR Piscium
+                        td   10.10
+                        td M2V
+                    tr
+                        td         36 Ophiuchi
+                        td    5.44
+                        td K2:III:
+                    tr
+                        td          82 Eridani
+                        td    5.35
+                        td G8V
+                    tr
+                        td         <font face="Symbol"> d </font> Pavonis
+                        td    4.62
+                        td G5IV-Vvar
+                    tr
+                        td          Wolf 1481
+                        td   12.39
+                        td M4
+                    tr
+                        td          EQ Pegasi
+                        td   11.07
+                        td M6Ve
+                    tr
+                        td    HO Librae or Wolf 562
+                        td   11.58
+                        td M5
+                    tr
+                        td    QY Aurigae or Ross 986
+                        td   12.63
+                        td M5Ve
+                    tr
+                        td           Wolf 629
+                        td   12.67
+                        td M4
+                    tr
+                        td           Ross 104
+                        td   10.92
+                        td M3
+                    tr
+                        td          37 Bootis
+                        td    5.41
+                        td G8V + K4V
+                    tr
+                        td           Ross 775
+                        td   11.19
+                        td M4
+                    tr
+                        td           Wolf 25
+                        td    6.38
+                        td K2V
+                    tr
+                        td         107 Piscium
+                        td    5.87
+                        td K1V
+                    tr
+                        td    VX Arietis or Ross 556
+                        td   11.16
+                        td M3.5Ve
+                    tr
+                        td           <font face="Symbol"> b </font> Hydri
+                        td    3.45
+                        td G2IV
+                    tr
+                        td         <font face="Symbol"> m </font> Cassiopei A
+                        td    5.78
+                        td G5Vp
+                    tr
+                        td           Ross 490
+                        td    9.64
+                        td M1V
